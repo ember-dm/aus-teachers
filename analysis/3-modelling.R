@@ -3,8 +3,7 @@ library(tidyverse)
 
 # Some useful functions
 ?ggplot()      # Read in your transformed datasets
-?inner_join()  # Methods for joining datasets together based on key columns
-?left_join()   
+?filter()      # Help filter out rows of data based on a logical condition
 ?mutate()      # Helps with modifying columns in a dataset
 ?summarise()   # Helps with summarising data into smaller sets
 ?count()       # Quick way to get the count of a dataset by one of the columns
@@ -18,7 +17,7 @@ example <- tibble(
 )
 
 example %>%
-  ggplot(aes(year, huge_numbers, fill = class)) +
+  ggplot(aes(x = year, y = huge_numbers, fill = class)) +
   geom_bar(stat = 'identity') + 
   labs(
     x = "Year",
@@ -26,7 +25,8 @@ example %>%
     fill = "GenZ chat",
     title = "Boomers keep showing up in the data",
     subtitle = "Huge numbers by year and GenZ chat"
-  )
+  ) + 
+  theme_minimal()
 
 # Suggested modelling steps ----
 # Read in linked data from step 2

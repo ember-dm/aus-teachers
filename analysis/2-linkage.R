@@ -7,7 +7,6 @@ library(janitor)
 ?read_rds()    # Read in your transformed datasets
 ?inner_join()  # Methods for joining datasets together based on key columns
 ?left_join()   
-?mutate()      # Helps with modifying columns in a dataset
 ?summarise()   # Helps with summarising data into smaller sets
 
 
@@ -19,4 +18,3 @@ library(janitor)
 # Join data together
 
 # Save linked data as a single set for ease of future use
-
